@@ -8,14 +8,13 @@ import {
   Paper,
 } from "@mui/material";
 
-const lastSended = 283;
+const lastSended = 301;
 //17 августа 2018
 
 // test resume
 // september 2020
 
 export const Table = ({ data }) => {
-
   return (
     <TableContainer component={Paper}>
       <MuiTable sx={{ minWidth: 650 }} aria-label="simple table">
@@ -35,7 +34,7 @@ export const Table = ({ data }) => {
               key={row.name}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
-              <TableCell className='counter'>
+              <TableCell className="counter">
                 {index + 1 > lastSended ? index + 1 - lastSended : index + 1}
               </TableCell>
               <TableCell component="th" scope="row">
