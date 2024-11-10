@@ -47,7 +47,7 @@ export const Nav = ({ fetchData, leeds }) => {
   const onSubmit = async () => {
     setIsLoading(true);
     for (let key in data) {
-      if (leeds.find((info) => info[key] === data[key])) {
+      if (key !== "city" && leeds.find((info) => info[key] === data[key])) {
         setError((error) => ({ ...error, [key]: true }));
         setIsLoading(false);
         return;
@@ -58,7 +58,7 @@ export const Nav = ({ fetchData, leeds }) => {
       }
     }
     if (!error.phone && !error.email) {
-      await supabase.from('cpaex').insert(data);
+      await supabase.from("cpaex").insert(data);
       await fetchData();
       setOpen(false);
       setData({
@@ -121,7 +121,11 @@ export const Nav = ({ fetchData, leeds }) => {
             setData((data) => ({ ...data, city: e.target.value }))
           }
         />
-        <Button variant="outlined" onClick={() => onSubmit()} disabled={isLoading} >
+        <Button
+          variant="outlined"
+          onClick={() => onSubmit()}
+          disabled={isLoading}
+        >
           Submit
         </Button>
       </Dialog>
