@@ -12,7 +12,7 @@ const lastSended = 350;
 //17 августа 2018
 
 // test resume
-// Февраль 2022
+// С апреля 2022
 
 export const Table = ({ data }) => {
   return (
