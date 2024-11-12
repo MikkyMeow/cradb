@@ -8,7 +8,7 @@ import {
   Paper,
 } from "@mui/material";
 
-const lastSended = 350;
+const lastSended = 380;
 //17 августа 2018
 
 // test resume
