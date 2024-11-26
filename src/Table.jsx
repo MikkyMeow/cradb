@@ -8,11 +8,11 @@ import {
   Paper,
 } from "@mui/material";
 
-const lastSended = 380;
+const lastSended = 413;
 //17 августа 2018
 
 // test resume
-// С апреля 2022
+// С июля 2022
 
 export const Table = ({ data }) => {
   return (
