@@ -49,7 +49,7 @@ export const Nav = ({ fetchData, leeds }) => {
     name: "",
     phone: "",
     email: "",
-    city: "",
+    city: "Москва",
   });
   const [error, setError] = useState({
     name: false,
@@ -78,7 +78,7 @@ export const Nav = ({ fetchData, leeds }) => {
         name: "",
         phone: "",
         email: "",
-        city: "",
+        city: "Москва",
       });
     }
     setIsLoading(false);
@@ -132,6 +132,7 @@ export const Nav = ({ fetchData, leeds }) => {
           onChange={(_, city) => setData((data) => ({ ...data, city }))}
           renderInput={(params) => <TextField {...params} label="City" variant="outlined" />}
           fullWidth
+          value={data.city}
         />
         <Button
           variant="outlined"

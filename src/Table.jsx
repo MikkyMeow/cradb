@@ -8,11 +8,14 @@ import {
   Paper,
 } from "@mui/material";
 
-const lastSended = 742;
+const lastSended = 799;
 //17 августа 2018
 
 // test resume
-// C |/| |-0 /\ 9I 2024
+// С ноября 2024
+
+// game dev
+// c april 2023 в прошлое
 
 
 export const Table = ({ data }) => {
